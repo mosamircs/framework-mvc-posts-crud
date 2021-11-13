@@ -1,0 +1,15 @@
+{
+    "name": "chd/framework_mvc_crud",
+    "autoload": {
+        "psr-4": {
+            "Chd\\FrameworkMvcCrud\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mohamed Samir",
+            "email": "tchd1@charisma-design.eu"
+        }
+    ], 
+    "require": {}
+}
