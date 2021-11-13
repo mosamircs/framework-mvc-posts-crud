@@ -1,0 +1,68 @@
+files structure for user posts project
+[main directory]=>framework_mvc_crud
+app:
+    Config:
+	  config.php 
+	  	- database configrations  [HOST,USER_NAME,PASSWORD,DATABASE_NAME]]
+    
+    Core:
+    	-Database.php //database make connection
+    	
+    Controllers:
+    		-UserController.php //controller for methods that user can do 
+    			[store => create new user]
+    			[index => read all users and corresponding posts]
+    			[update => upadte user properties]
+    			[destroy => delete user by id]
+    			
+    		-PostController.php //controller for methods that post can do
+    			[store => create new post to specific user]
+    			[index => read all  posts]
+    			[update => upadte post properties]
+    			[destroy => delete post by id]
+  
+    Models:
+    	-User.php //make relation between user and posts => hasMany
+    	
+    	-Post.php //make relation between user and posts => belongTo
+    
+    Views:
+    	-User //viewer to users data
+			-index.php //show all users with delete and create and update buttons
+			-update.php //form for change user data
+			-create.php //create form for new user
+
+    	-Post.php //viewer to posts data
+			-index.php //show all post with delete and create and update buttons
+			-update.php //form for change post data 
+			-create.php //create form for new post
+
+	Resources:
+		-UserResource.php // user and posts can now refactor his returned data and choose which to be shown
+		-PostResource.php // post can now refactor his returned data and choose which to be shown
+
+	Requests:
+		-UserValidationRequest.php //validate on user data which will be added or updated
+		-PostValidationRequest.php //validate on post data when it added to check it
+	
+public:
+	css:
+		-style.css
+	img:
+	js:
+		-app.js
+	-autoloader.php
+	-index.php //our main entry point
+
+Routes:
+	-api.php //for api routes routes on insominia
+	-web.php //for web and view on browser routes
+
+Database:
+	migrations:
+		-create_posts_table.php
+		-create_users_table.php
+
+-framework_MVC_CRUD.jpg //Database Design
+
+-project_posts_users_crud_framework.txt //project analysis 

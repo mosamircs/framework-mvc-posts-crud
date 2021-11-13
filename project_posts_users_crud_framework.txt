@@ -1,0 +1,38 @@
+we start a [posts <=> users] project -> web app using ->php native and mysql database and (HTML and css and javascript frontend)
+
+1- we will first create our database
+
+2- we will second add dummy data 
+
+3- CRUD operations on users and posts:
+	1- create (user or post) [post method] needs form to fill data
+		-check if the data is not empty (validations)
+		-check the data types (validations)
+		
+	2- Read (Users and posts) [GET method] need to be styled
+		-Read data of users and their corresponding posts from database as they are on to many relation [user has many posts]
+		-read this data and show in another page
+		
+	3- update (user or post) [PUT Method] needs to change data on form
+		-same as create but we need to change data 
+		-edit user data [name,age]
+		-edit post data [title,body]
+		-check the values are the same or not (validation)
+		-perform update operation on database and form
+		
+	4- Delete: (user or post)[DELETE Method] needs button to delete user or post 
+		-delete checks the user id is of requested to be deleted post (validation)
+		-perform delete operation on database and form 
+		
+Database:
+	1- users table:
+		-id
+		-name
+		-age
+		user has many posts
+			2-posts table:
+				-id
+				-title
+				-body
+				-user_id
+				
